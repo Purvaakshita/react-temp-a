@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-export default class App20 extends Component {
+export default class App21 extends Component {
     render(){
         return(
             <div>
