@@ -1,11 +1,26 @@
-import React, { Component } from 'react'
-export default class App21 extends Component {
-    render(){
-        return(
-            <div>
-                <h1>This is App21</h1>
-                
-            </div>
-        )
-    }
+import React, { useEffect, useState } from "react";
+
+export default function App21() {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    console.log("App21 Mounted");
+    return () => {
+      console.log("App21 Unmounted");
+    };
+  }, []);
+  const handleUpdate = () => {
+    setCount(count + 1);
+    console.log("App21 Updated/reloaded")
+  };
+  return (
+    <div>
+      <h3>This is App21</h3>
+
+      <p>
+        <button onClick={handleUpdate}>Update</button>
+      </p>
+
+      {count}
+    </div>
+  );
 }
