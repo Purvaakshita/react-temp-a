@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { fromJS } from "immutable";
 export default function App19() {
   const [user, setUser] = useState(fromJS({ name: "John", score: 80 }));
   const updateScore = () => {
